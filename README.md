@@ -2,7 +2,7 @@
 
 **Version** : 2.0 — Juin 2026  
 **Compatibilité** : Ubuntu 22/24 LTS · Debian 11/12 · Raspberry Pi OS  
-**Auteur** : Usage interne
+@xaxdb
 
 ---
 
@@ -39,15 +39,15 @@
                               │  Tunnels VPN chiffrés (UDP 1194)
               ┌───────────────┼───────────────┐
               │               │               │
-      ┌───────┴──────┐ ┌──────┴──────┐ ┌─────┴──────────┐
-      │ Mini-PC      │ │ Mini-PC     │ │ PC Technicien  │
-      │ Site A       │ │ Site B      │ │ (partout)      │
-      │ 10.10.1.1    │ │ 10.10.2.1   │ │ 10.10.0.20+    │
+      ┌───────┴──────┐ ┌──────┴──────┐ ┌──────┴─────────┐
+      │ Mini-PC      │ │ Mini-PC     │ │  PC Technicien │
+      │ Site A       │ │ Site B      │ │   (partout)    │
+      │ 10.10.1.1    │ │ 10.10.2.1   │ │   10.10.0.20+  │
       └───────┬──────┘ └──────┬──────┘ └────────────────┘
-              │ NAT 1:1        │ NAT 1:1
+              │ NAT 1:1       │ NAT 1:1
       ┌───────┴──────┐ ┌──────┴──────┐
       │ 192.168.1.x  │ │ 192.168.1.x │  ← Mêmes plages IP physiques,
-      │ JACE, automat│ │ JACE, automat│   pas de conflit grâce au NAT
+      │ JACE, automat│ │JACE, automat│   pas de conflit grâce au NAT
       └──────────────┘ └─────────────┘
 ```
 
@@ -499,4 +499,3 @@ sudo openssl crl -in /etc/openvpn/crl.pem -noout -nextupdate
 
 ---
 
-*Document généré automatiquement — Infrastructure VPN GTB/GTC*
